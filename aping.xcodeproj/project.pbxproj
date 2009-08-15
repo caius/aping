@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09125D27102EE998006B967D /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09125D26102EE998006B967D /* RegexKitLite.m */; };
 		096ABDF6101FAD22003A49E5 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096ABDF5101FAD22003A49E5 /* AppController.m */; };
 		8DD76F9A0486AA7600D96B5E /* aping.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* aping.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* aping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aping.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		09125D25102EE998006B967D /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		09125D26102EE998006B967D /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		096ABDF4101FAD22003A49E5 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		096ABDF5101FAD22003A49E5 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		32A70AAB03705E1F00C91783 /* aping_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aping_Prefix.pch; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				09125D25102EE998006B967D /* RegexKitLite.h */,
+				09125D26102EE998006B967D /* RegexKitLite.m */,
 				32A70AAB03705E1F00C91783 /* aping_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* aping.m */,
 				096ABDF4101FAD22003A49E5 /* AppController.h */,
@@ -139,6 +144,7 @@
 			files = (
 				8DD76F9A0486AA7600D96B5E /* aping.m in Sources */,
 				096ABDF6101FAD22003A49E5 /* AppController.m in Sources */,
+				09125D27102EE998006B967D /* RegexKitLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +162,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = aping_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-licucore";
 				PRODUCT_NAME = aping;
 			};
 			name = Debug;
@@ -169,7 +177,9 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = aping_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-licucore";
 				PRODUCT_NAME = aping;
 			};
 			name = Release;
